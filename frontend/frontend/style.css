@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3ef;
+    color: #252525;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+}
+
+header h1 {
+    letter-spacing: 3px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #252525;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #dedbd3;
+}
+
+.hero h2 {
+    font-size: 65px;
+    margin: 15px 0;
+    letter-spacing: 8px;
+}
+
+main, #about {
+    padding: 60px 8%;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.art-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.art-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.art-card h3 {
+    margin: 12px 0 6px;
+}
+
+.art-card p {
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #252525;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+}
