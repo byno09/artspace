@@ -6,7 +6,13 @@ const artGrid = document.getElementById("artGrid");
 async function loadArtworks() {
     try {
         const response = await fetch(
-            `${BACKEND_URL}/api/artworks`
+    `${BACKEND_URL}/api/artworks`,
+    {
+        headers: {
+            "ngrok-skip-browser-warning": "true"
+        }
+    }
+);
         ); console.log("BACKEND:", BACKEND_URL);
 console.log("STATUS:", response.status);
 
