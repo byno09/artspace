@@ -7,7 +7,8 @@ async function loadArtworks() {
     try {
         const response = await fetch(
             `${BACKEND_URL}/api/artworks`
-        );
+        ); console.log("BACKEND:", BACKEND_URL);
+console.log("STATUS:", response.status);
 
         if (!response.ok) {
             throw new Error("Gagal mengambil data karya.");
