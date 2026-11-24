@@ -21,6 +21,14 @@ console.log("STATUS:", response.status);
         }
 
         const artworks = await response.json();
+        const response = await fetch(
+    `${BACKEND_URL}/api/artworks`,
+    {
+        headers: {
+            "ngrok-skip-browser-warning": "true"
+        }
+    }
+);
 
         artGrid.innerHTML = "";
 
