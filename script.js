@@ -1,5 +1,5 @@
 
-const BACKEND_URL = "https://reapprove-delouse-ungodly.ngrok-free.dev/";
+const BACKEND_URL = "https://reapprove-delouse-ungodly.ngrok-free.dev";
 
 const artGrid = document.getElementById("artGrid");
 
