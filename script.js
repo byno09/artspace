@@ -1,5 +1,5 @@
 
-const BACKEND_URL = "https://reapprove-delouse-ungodly.ngrok-free.dev/";
+const BACKEND_URL = "https://reapprove-delouse-ungodly.ngrok-free.dev";
 
 const artGrid = document.getElementById("artGrid");
 
@@ -22,8 +22,13 @@ async function loadArtworks() {
             card.className = "art-card";
 
             const image = document.createElement("img");
-            image.src = BACKEND_URL + art.image;
+
+            image.src = `${BACKEND_URL}${art.image}`;
             image.alt = art.title;
+
+            image.onerror = function() {
+                console.error("Gambar gagal dimuat:", image.src);
+            };
 
             const title = document.createElement("h3");
             title.textContent = art.title;
