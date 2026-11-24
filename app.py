@@ -9,21 +9,21 @@ app = Flask(
 artworks = [
 
     {
-        "title": "Nature Illustration",
-        "category": "Illustration",
-        "image": "/images/artwork1.jpg"
+        "title": "Sun Bathe",
+        "category": "Traditional Sketch",
+        "image": "/images/artwork1.jpeg"
     },
 
     {
-        "title": "Silent Landscape",
-        "category": "Photography",
-        "image": "/images/artwork2.jpg"
+        "title": "Chill Painter",
+        "category": "Digital Illustration",
+        "image": "/images/artwork2.jpeg"
     },
 
     {
-        "title": "Creative Poster",
-        "category": "Poster",
-        "image": "/images/artwork3.jpg"
+        "title": "Show Off",
+        "category": "Digital Poster",
+        "image": "/images/artwork3.jpeg"
     }
 
 ]
