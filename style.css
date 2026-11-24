@@ -111,3 +111,7 @@ html, body {
     overflow-y: auto !important;
     overflow-x: hidden;
 }
+
+body {
+    min-height: 200vh !important;
+}
