@@ -21,6 +21,7 @@ console.log("STATUS:", response.status);
         }
 
         const artworks = await response.json();
+        console.log("DATA ARTWORKS:", artworks);
         const response = await fetch(
     `${BACKEND_URL}/api/artworks`,
     {
