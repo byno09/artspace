@@ -1,5 +1,4 @@
 
-const BACKEND_URL = "https://reapprove-delouse-ungodly.ngrok-free.dev";
 
 const artGrid = document.getElementById("artGrid");
 
@@ -7,14 +6,7 @@ async function loadArtworks() {
     try {
         artGrid.innerHTML = "Loading artworks...";
 
-        const response = await fetch(
-            `${BACKEND_URL}/api/artworks`,
-            {
-                headers: {
-                    "ngrok-skip-browser-warning": "true"
-                }
-            }
-        );
+        const response = await fetch("artworks.json");
 
         if (!response.ok) {
             throw new Error("Gagal mengambil data karya.");
@@ -31,7 +23,7 @@ async function loadArtworks() {
             card.className = "art-card";
 
             const image = document.createElement("img");
-            image.src = `${BACKEND_URL}${art.image}?ngrok-skip-browser-warning=true`;
+            image.src = art.image;
             image.alt = art.title;
 
             const title = document.createElement("h3");
@@ -48,7 +40,7 @@ async function loadArtworks() {
         console.error("ARTSPACE ERROR:", error);
 
         artGrid.textContent =
-            "Belum dapat memuat galeri. Periksa koneksi backend.";
+            "Belum dapat memuat galeri. Periksa data karya.";
     }
 }
 
