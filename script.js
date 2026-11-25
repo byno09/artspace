@@ -31,7 +31,7 @@ async function loadArtworks() {
             card.className = "art-card";
 
             const image = document.createElement("img");
-            image.src = `${BACKEND_URL}${art.image}`;
+            image.src = `${BACKEND_URL}${art.image}?ngrok-skip-browser-warning=true`;
             image.alt = art.title;
 
             const title = document.createElement("h3");
