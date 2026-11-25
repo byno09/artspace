@@ -29,11 +29,16 @@ async function loadArtworks() {
             const title = document.createElement("h3");
             title.textContent = art.title;
 
-            const category = document.createElement("p");
-            category.textContent = art.category;
+            
+const category = document.createElement("p");
+category.textContent = art.category;
 
-            card.append(image, title, category);
-            artGrid.appendChild(card);
+const credit = document.createElement("small");
+credit.className = "art-credit";
+credit.textContent = `Artwork by: ${art.credit}`;
+
+card.append(image, title, category, credit);
+
         });
 
     } catch (error) {
