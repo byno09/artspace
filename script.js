@@ -5,31 +5,24 @@ const artGrid = document.getElementById("artGrid");
 
 async function loadArtworks() {
     try {
+        artGrid.innerHTML = "Loading artworks...";
+
         const response = await fetch(
-    `${BACKEND_URL}/api/artworks`,
-    {
-        headers: {
-            "ngrok-skip-browser-warning": "true"
-        }
-    }
-);
-        ); console.log("BACKEND:", BACKEND_URL);
-console.log("STATUS:", response.status);
+            `${BACKEND_URL}/api/artworks`,
+            {
+                headers: {
+                    "ngrok-skip-browser-warning": "true"
+                }
+            }
+        );
 
         if (!response.ok) {
             throw new Error("Gagal mengambil data karya.");
         }
 
         const artworks = await response.json();
+
         console.log("DATA ARTWORKS:", artworks);
-        const response = await fetch(
-    `${BACKEND_URL}/api/artworks`,
-    {
-        headers: {
-            "ngrok-skip-browser-warning": "true"
-        }
-    }
-);
 
         artGrid.innerHTML = "";
 
@@ -38,13 +31,8 @@ console.log("STATUS:", response.status);
             card.className = "art-card";
 
             const image = document.createElement("img");
-
             image.src = `${BACKEND_URL}${art.image}`;
             image.alt = art.title;
-
-            image.onerror = function() {
-                console.error("Gambar gagal dimuat:", image.src);
-            };
 
             const title = document.createElement("h3");
             title.textContent = art.title;
@@ -57,9 +45,10 @@ console.log("STATUS:", response.status);
         });
 
     } catch (error) {
+        console.error("ARTSPACE ERROR:", error);
+
         artGrid.textContent =
             "Belum dapat memuat galeri. Periksa koneksi backend.";
-        console.error(error);
     }
 }
 
