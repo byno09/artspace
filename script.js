@@ -39,6 +39,8 @@ credit.textContent = `Artwork by: ${art.credit}`;
 
 card.append(image, title, category, credit);
 
+artGrid.appendChild(card);
+            
         });
 
     } catch (error) {
