@@ -3,16 +3,19 @@
   {
     "title": "Sun Bathe",
     "category": "Traditional Sketch",
-    "image": "images/artwork1.jpeg"
+    "image": "images/artwork1.jpeg",
+    "credit": "Oktavia Nur Cantika"
   },
   {
     "title": "Chill Painter",
     "category": "Digital Illustration",
-    "image": "images/artwork2.jpeg"
+    "image": "images/artwork2.jpeg",
+    "credit": "Rizqyta Dwi Andini"
   },
   {
     "title": "Show Off",
     "category": "Digital Poster",
-    "image": "images/artwork3.jpeg"
+    "image": "images/artwork3.jpeg",
+    "credit": "Rizqyta Dwi Andini"
   }
 ]
